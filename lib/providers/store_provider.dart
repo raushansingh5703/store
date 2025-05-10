@@ -14,7 +14,7 @@ class StoreProvider with ChangeNotifier {
     notifyListeners();
 
     try {
-      _stores = await ApiService.fetchStores(); // Use ApiService here
+      _stores = await ApiService.fetchStores();
     } catch (e) {
       print('API error in StoreProvider: $e');
     } finally {
@@ -23,7 +23,5 @@ class StoreProvider with ChangeNotifier {
     }
   }
 
-  void selectStore(StoreModel selectedStore) {
-    // Optional: Implement for map selection
-  }
+
 }
